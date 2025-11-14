@@ -4,17 +4,21 @@
  */
 package GUI;
 
+import Logic.*;
+import Repository.*;
+
 /**
  *
  * @author johan
  */
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        IAeropuertoRepository aeropuertoRepo = new AeropuertoRepositoryImpl();
+        IAerolineaRepository aerolineaRepo = new AerolineaRepositoryImpl();
+        IVueloRepository vueloRepo = new VueloRepositoryImpl(aeropuertoRepo, aerolineaRepo);
+        
+        ServicioConsulta servicioConsulta = new ServicioConsulta(vueloRepo);
     }
     
 }

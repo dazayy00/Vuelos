@@ -12,5 +12,6 @@ import java.util.List;
  * @author johan
  */
 public interface IConsultaStrategy {
+    //interfaz strategy 
     List<Vuelo> buscar(List<Vuelo> vuelos);
 }
