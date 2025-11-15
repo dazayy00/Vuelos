@@ -12,13 +12,16 @@ import java.util.Map;
  *
  * @author johan
  */
-public class AeropuertoRepositoryImpl {
+public class AeropuertoRepositoryImpl implements IAeropuertoRepository {
     private Map<String, Aeropuerto> db = new HashMap<>();
-    public AeropuertoRepositoryImpl(){
-        db.put("MEX", new Aeropuerto("MEX", "Benito Juarz", "Ciudad de mexico"));
+
+    public AeropuertoRepositoryImpl() {
+        db.put("MEX", new Aeropuerto("MEX", "Benito Juárez", "Ciudad de México"));
         db.put("MTY", new Aeropuerto("MTY", "Mariano Escobedo", "Monterrey"));
     }
-    public Aeropuerto findByCodigo(String c) {
-        return db.get(c);
+
+    @Override
+    public Aeropuerto findByCodigo(String c) { 
+        return db.get(c); 
     }
 }

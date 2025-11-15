@@ -12,12 +12,15 @@ import java.util.Map;
  *
  * @author johan
  */
-public class AerolineaRepositoryImpl {
+public class AerolineaRepositoryImpl implements IAerolineaRepository {
     private Map<String, Aerolinea> db = new HashMap<>();
-    public AerolineaRepositoryImpl(){
-        db.put("Aeromexico", new Aerolinea("Aeromexico"));
+
+    public AerolineaRepositoryImpl() { 
+        db.put("Aeromexico", new Aerolinea("Aeromexico")); 
     }
-    public Aerolinea findByNombre(String n){
-        return db.get(n);
+
+    @Override
+    public Aerolinea findByNombre(String n) { 
+        return db.get(n); 
     }
 }

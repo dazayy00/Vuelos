@@ -20,7 +20,7 @@ public class Pasajero {
     private List<Tarjeta> tarjetas;
     private List<Reserva> reservas;
 
-    public Pasajero(String email, String password, String nombre, String direccion, List<Tarjeta> tarjetas, List<Reserva> reservas) {
+    public Pasajero(String email, String password, String nombre, String direccion) {
         this.email = email;
         this.password = password;
         this.nombre = nombre;
